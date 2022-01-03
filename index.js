@@ -47,13 +47,7 @@ app.get("/filtro",async(req,res)=>{
     // api: /consultas?store=x&category=y&brand=b
     const { store,category,brand } = req.query;
    
-    /*
-        {
-            store: x,
-            category:y,
-            branch:b
-        }
-    */
+  
     const cursos = await filter(store,category,brand);
     res.send(JSON.stringify(cursos))
   

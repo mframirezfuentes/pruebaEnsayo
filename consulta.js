@@ -4,10 +4,10 @@ const {
 require('dotenv').config()
 const pool = new Pool({
     user: process.env.DB_USER,
-    port: 5432,
+    port: process.env.DB_PORT,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAMEDATABASE,
-    host: 'localhost'
+    host: process.env.DB_HOST
 })
 
 async function categories() {
